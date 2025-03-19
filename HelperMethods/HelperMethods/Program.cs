@@ -12,15 +12,6 @@ string lastName = Console.ReadLine();
 Console.Write("In what city are you born?");
 string city = Console.ReadLine();
 
-/*char[] firstNameArray = firstName.ToCharArray();
-Array.Reverse(firstNameArray);
-
-char[] lastNameArray = lastName.ToCharArray();
-Array.Reverse(lastNameArray);
-
-char[] cityArray = city.ToCharArray();
-Array.Reverse(cityArray);*/
-
 DisplayResult( ReverseString(firstName),
     ReverseString(lastName) ,
     ReverseString(city));
