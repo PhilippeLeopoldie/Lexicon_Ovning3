@@ -5,7 +5,10 @@ namespace CodeTraining;
 public static class CodeChallengesKattis
 {
     /*------------------from https://open.kattis.com/ --------------------------------------------*/
-
+    /*Basically, this is how it works: you print the integers from 1
+to Z, replacing any of them divisible by X
+with Fizz or, if they are divisible by Y , with Buzz.
+If the number is divisible by both X and Y, you print FizzBuzz instead.*/
     public static void FizzBuzz(int x, int y, int z)
     {
         for (int i = 1; i <= z; i++)
