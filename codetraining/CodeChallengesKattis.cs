@@ -5,7 +5,7 @@ namespace CodeTraining;
 public static class CodeChallengesKattis
 {
     /*------------------from https://open.kattis.com/ --------------------------------------------*/
-    
+
     public static void FizzBuzz(int x, int y, int z)
     {
         for (int i = 1; i <= z; i++)
@@ -102,15 +102,15 @@ public static class CodeChallengesKattis
 
         var sequenceResult = " (sequence: ";
 
-        if (number == 0) return $"{number}{sequenceResult += number})";//position 0
-        if (number == 1) return $"{number}{sequenceResult += "0, "+number})";// position 1
-        //position 2
-        var previousValue = 1;
+        if (number == 0) return $"{number}{sequenceResult += number})";
+        if (number == 1) return $"{number}{sequenceResult += "0, "+number})";
+        // index 1 in the sequence
+        var previousValue = 0;
         var currentValue = 1;
-        var nextValue = previousValue + currentValue;// value = 2
-        sequenceResult += $"0, {previousValue}, {currentValue}";
+        var nextValue = previousValue + currentValue;// value = 1
+        sequenceResult += $"{previousValue}, {currentValue}";
 
-        for (int i = 2; i < number -1; i++)
+        for (int i = 2; i < number ; i++)
         {
             previousValue = currentValue;
             currentValue = nextValue;
