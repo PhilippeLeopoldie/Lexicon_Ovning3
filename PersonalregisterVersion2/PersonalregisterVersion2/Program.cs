@@ -4,9 +4,10 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        var quit = "Q";
         string choice;
         Presentation();
-        while (choice.ToUpper() != "Q")
+        while (choice.ToUpper() != quit)
         {
             Presentation();
         }
