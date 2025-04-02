@@ -25,7 +25,11 @@ internal static class PayRoll
 
     internal static void RegisterEmployee(Employee employee)
     {
-        EmployeesList.Add(employee.PersonNummer, employee);
+        if (!EmployeesList.TryAdd(employee.PersonNummer, employee))
+        {
+            Console.WriteLine($"Employee with 'PersonNummer:' {employee.PersonNummer} already exist!");
+            GetEmployeeByPersonNummer(employee.PersonNummer);
+        }
     }
 
     internal static void GetDetails()
