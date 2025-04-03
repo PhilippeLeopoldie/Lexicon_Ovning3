@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35913.81 d17.13
+VisualStudioVersion = 17.13.35913.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ovning2_FlowControl", "Ovning2_FlowControl\Ovning2_FlowControl.csproj", "{64D1E399-DE45-412C-B658-830863456975}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EBC28A49-310E-4A7E-A37C-71188CFD3C55} = {EBC28A49-310E-4A7E-A37C-71188CFD3C55}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Option1", "Option1\Option1.csproj", "{EBC28A49-310E-4A7E-A37C-71188CFD3C55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{64D1E399-DE45-412C-B658-830863456975}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64D1E399-DE45-412C-B658-830863456975}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64D1E399-DE45-412C-B658-830863456975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBC28A49-310E-4A7E-A37C-71188CFD3C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC28A49-310E-4A7E-A37C-71188CFD3C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBC28A49-310E-4A7E-A37C-71188CFD3C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBC28A49-310E-4A7E-A37C-71188CFD3C55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
