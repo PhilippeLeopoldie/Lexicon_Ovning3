@@ -11,7 +11,7 @@ public static class Option1Starter
         {
             Console.Write($"Enter person {i} age: ");
             var age = Option1Helper.UintValidation(Console.ReadLine());
-            Console.Write($"Person {i} has a ");
+            Console.Write($"Person {i} has ");
             totalPrice += Option1Helper.DisplayDiscount(age);
         }
         Console.WriteLine($"Total price for {numberOfPerson} person(s): {totalPrice}kr");
