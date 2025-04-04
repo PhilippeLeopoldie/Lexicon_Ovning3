@@ -17,7 +17,6 @@ internal static class Helper
     
     internal static void RunApp(string input)
     {
-
         switch (input)
         {
             case "0":
@@ -25,9 +24,9 @@ internal static class Helper
             case "1": Option1Starter.Run();
                 break;
             default: 
-                Console.WriteLine("invalid input");
-                MainMenu.ShowMainMenu();
+                Console.WriteLine("invalid entry");
                 break;
         }
+        Console.WriteLine();
     }
 }
