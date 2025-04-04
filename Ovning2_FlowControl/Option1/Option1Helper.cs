@@ -16,7 +16,7 @@ internal static class Option1Helper
     internal static uint UintValidation (string input)
     {
         uint result;
-        while(!uint.TryParse(input, out result) || result == 0)
+        while(!uint.TryParse(input, out result))
         {
             Console.Write("Invalid entry, try again: ");
             input = Console.ReadLine();
