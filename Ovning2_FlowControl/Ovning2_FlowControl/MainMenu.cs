@@ -12,7 +12,7 @@ internal static class MainMenu
     {
         {"1","Youth or Senior discount" },
         {"2","Repeat Ten Times" },
-        {"3","The Third Word" },
+        {"3","Extract The Third Word" },
         {"0","Exit" }
     };
     

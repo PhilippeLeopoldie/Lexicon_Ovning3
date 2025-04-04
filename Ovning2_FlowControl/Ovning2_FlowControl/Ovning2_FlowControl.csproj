@@ -10,6 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Option1\Option1.csproj" />
     <ProjectReference Include="..\Option2_RepeatTenTimes\Option2_RepeatTenTimes.csproj" />
+    <ProjectReference Include="..\Option3_TheThirdWord\Option3_TheThirdWord.csproj" />
   </ItemGroup>
 
 </Project>

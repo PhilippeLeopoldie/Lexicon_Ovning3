@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Option1", "Option1\Option1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Option2_RepeatTenTimes", "Option2_RepeatTenTimes\Option2_RepeatTenTimes.csproj", "{03178347-AFED-417F-8D2F-EBE84CF68E9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Option3_TheThirdWord", "Option3_TheThirdWord\Option3_TheThirdWord.csproj", "{9CD35FDE-7573-43AE-A51E-09CB7FFD61CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{03178347-AFED-417F-8D2F-EBE84CF68E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03178347-AFED-417F-8D2F-EBE84CF68E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03178347-AFED-417F-8D2F-EBE84CF68E9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD35FDE-7573-43AE-A51E-09CB7FFD61CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD35FDE-7573-43AE-A51E-09CB7FFD61CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD35FDE-7573-43AE-A51E-09CB7FFD61CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD35FDE-7573-43AE-A51E-09CB7FFD61CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

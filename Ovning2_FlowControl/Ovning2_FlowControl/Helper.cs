@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Option1;
 using Option2_RepeatTenTimes;
+using Option3_TheThirdWord;
 
 
 namespace Ovning2_FlowControl;
@@ -25,6 +26,8 @@ internal static class Helper
             case "1": Option1Starter.Run();
                 break;
             case "2": RepeatTenTimes.Run();
+                break;
+            case "3": TheThirdWord.Run();
                 break;
             default: 
                 Console.WriteLine("invalid entry");
