@@ -4,13 +4,12 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        MainMenu.ShowMainMenu();
-
-        var input = Console.ReadLine();
-        while (input  != "0")
+        var input="0";
+        do
         {
+            input = MainMenu.StartMainMenu();
             Helper.RunApp(input);
-            input = Console.ReadLine();
         }
+        while (input != "0");
     }
 }
