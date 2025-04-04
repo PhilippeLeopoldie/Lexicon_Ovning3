@@ -12,13 +12,12 @@ internal static class Option1Helper
     const int SeniorPrice = 90;
     const int StandardPrice = 120;
 
-    internal static uint AgeValidation (string input)
+    internal static uint UintValidation (string input)
     {
         uint result;
         while(!uint.TryParse(input, out result) || result == 0)
         {
-            Console.WriteLine("Invalid entry");
-            Console.WriteLine("Enter your age:");
+            Console.Write("Invalid entry, try again: ");
             input = Console.ReadLine();
         };
         return result;
