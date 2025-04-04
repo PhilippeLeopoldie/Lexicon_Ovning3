@@ -14,6 +14,6 @@ public static class Option1Starter
             Console.Write($"Person {i} has a ");
             totalPrice += Option1Helper.DisplayDiscount(age);
         }
-        Console.WriteLine($"Total price: {totalPrice}kr");
+        Console.WriteLine($"Total price for {numberOfPerson} person(s): {totalPrice}kr");
     }
 }
