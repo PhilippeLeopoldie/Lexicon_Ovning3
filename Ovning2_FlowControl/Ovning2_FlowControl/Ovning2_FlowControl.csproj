@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Option1\Option1.csproj" />
+    <ProjectReference Include="..\Option2_RepeatTenTimes\Option2_RepeatTenTimes.csproj" />
   </ItemGroup>
 
 </Project>

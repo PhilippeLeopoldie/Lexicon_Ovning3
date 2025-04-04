@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Option1;
+using Option2_RepeatTenTimes;
 
 
 namespace Ovning2_FlowControl;
@@ -22,6 +23,8 @@ internal static class Helper
             case "0":
                 break;
             case "1": Option1Starter.Run();
+                break;
+            case "2": RepeatTenTimes.Run();
                 break;
             default: 
                 Console.WriteLine("invalid entry");

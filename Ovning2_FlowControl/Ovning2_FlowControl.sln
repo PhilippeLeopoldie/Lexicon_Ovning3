@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ovning2_FlowControl", "Ovni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Option1", "Option1\Option1.csproj", "{EBC28A49-310E-4A7E-A37C-71188CFD3C55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Option2_RepeatTenTimes", "Option2_RepeatTenTimes\Option2_RepeatTenTimes.csproj", "{03178347-AFED-417F-8D2F-EBE84CF68E9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{EBC28A49-310E-4A7E-A37C-71188CFD3C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBC28A49-310E-4A7E-A37C-71188CFD3C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBC28A49-310E-4A7E-A37C-71188CFD3C55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03178347-AFED-417F-8D2F-EBE84CF68E9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03178347-AFED-417F-8D2F-EBE84CF68E9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03178347-AFED-417F-8D2F-EBE84CF68E9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03178347-AFED-417F-8D2F-EBE84CF68E9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
