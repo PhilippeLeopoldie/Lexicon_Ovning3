@@ -16,7 +16,7 @@ internal static class MainMenu
         {"0","Exit" }
     };
     
-    internal static void ShowMainMenu()
+    internal static string StartMainMenu()
     {
         Console.WriteLine("------- Main Menu -------");
         Console.WriteLine("Choose a function :");
@@ -25,7 +25,7 @@ internal static class MainMenu
         {
             Console.WriteLine($"Enter {option.Key} for {option.Value}");
         }
-
+        return Console.ReadLine();
     }
 
     
