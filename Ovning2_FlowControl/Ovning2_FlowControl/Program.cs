@@ -4,12 +4,13 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        var input="0";
+        var stopProgram = "0";
+        var input="";
         do
         {
             input = MainMenu.StartMainMenu();
             Helper.RunApp(input);
         }
-        while (input != "0");
+        while (input != stopProgram);
     }
 }
