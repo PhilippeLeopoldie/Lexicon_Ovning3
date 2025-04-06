@@ -8,6 +8,7 @@ public class YouthOrSeniorStarter
 
     public void Run()
     {
+        Console.WriteLine("------Cinema Tickets------");
         Console.Write("Enter number of person: ");
         NumberOfPerson = YouthOrSeniorHelper.UintValidation(Console.ReadLine());
         for(int i = 1; i <= NumberOfPerson; i++)
@@ -17,6 +18,7 @@ public class YouthOrSeniorStarter
             Console.Write($"Enter {person.Name}'s age in 'Year': ");
             person.Age = YouthOrSeniorHelper.UintValidation(Console.ReadLine());
             TotalPrice += YouthOrSeniorHelper.GetPrice(person);
+            Console.WriteLine();
         }
         Console.WriteLine($"Total price for {NumberOfPerson} person(s): {TotalPrice}kr");
     }

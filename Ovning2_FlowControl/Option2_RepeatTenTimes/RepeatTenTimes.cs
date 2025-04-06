@@ -4,6 +4,7 @@ public static class RepeatTenTimes
 {
     public static void Run()
     {
+        Console.WriteLine("------Repeat Ten Times------");
         int numberOfRepetition = 10;
         Console.Write("Enter your text: ");
         var input = Console.ReadLine();
