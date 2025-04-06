@@ -1,4 +1,5 @@
-﻿namespace Option2_RepeatTenTimes;
+﻿using Option1_YouthOrSenior;
+namespace Option2_RepeatTenTimes;
 
 public static class RepeatTenTimes
 {
@@ -7,10 +8,11 @@ public static class RepeatTenTimes
     {
         Console.WriteLine("------Repeat Ten Times------");
         Console.Write("Enter your text: ");
-        var input = Console.ReadLine();
+        var input = Util.StringValidation(Console.ReadLine());
         for (int i = 1; i <= numberOfRepetition; i++)
         {
             Console.Write($"{i}.{input}, ");
         }
+        Console.WriteLine();
     }
 }
