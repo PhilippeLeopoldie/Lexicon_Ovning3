@@ -1,4 +1,5 @@
-﻿namespace Option3_TheThirdWord;
+﻿using Option1_YouthOrSenior;
+namespace Option3_TheThirdWord;
 
 public static class TheThirdWord
 {
@@ -8,7 +9,8 @@ public static class TheThirdWord
         DisplayPresentation();
         do
         {
-            var output = RemoveEmptySpace(Console.ReadLine());
+            var input = Util.StringValidation(Console.ReadLine());
+            var output = RemoveEmptySpace(input);
             if (output.Count() >= 3)
             {
                 isValid = true;
@@ -16,7 +18,7 @@ public static class TheThirdWord
             } 
             else 
             { 
-                Console.WriteLine("Invalid entry, try again: "); 
+                Console.WriteLine("Invalid entry, it must be at least 3 words: "); 
             }
         }
         while (!isValid);
