@@ -35,20 +35,21 @@ internal static class YouthOrSeniorHelper
         return input;
     }
 
-    internal static int DisplayDiscount(uint age)
+    internal static int DisplayDiscount(Person person)
     {
+        var currentPriceLevel= person.PriceLevel;
         int price;
-        if(age < 5 || age > 100)
+        if(currentPriceLevel == PriceLevel.FreePrice)
         {
             price = FreePrice;
             Console.WriteLine($"an Entry for Free: {FreePrice}kr");
         }
-        else if (age < 20)
+        else if (currentPriceLevel == PriceLevel.YouthPrice)
         {
             price = YouthPrice;
             Console.WriteLine($"a Youth price: {YouthPrice}kr");
         }
-        else if (age > 64)
+        else if (currentPriceLevel == PriceLevel.SeniorPrice)
         {
             price = SeniorPrice;
             Console.WriteLine($"a Senior price: {SeniorPrice}kr");
