@@ -1,6 +1,6 @@
 ﻿namespace Option1_YouthOrSenior;
 
-public class YouthOrSeniorStarter
+public class YouthOrSenior
 {
     public Person person = new Person();
     public uint NumberOfPerson {  get; set; }

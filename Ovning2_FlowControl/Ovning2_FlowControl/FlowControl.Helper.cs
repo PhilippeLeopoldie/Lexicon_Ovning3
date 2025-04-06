@@ -13,7 +13,7 @@ internal static class Helper
         {
             case "0":
                 break;
-            case "1": new YouthOrSeniorStarter().Run();
+            case "1": new YouthOrSenior().Run();
                 break;
             case "2": RepeatTenTimes.Run();
                 break;
