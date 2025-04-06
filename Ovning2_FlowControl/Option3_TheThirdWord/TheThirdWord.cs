@@ -18,7 +18,7 @@ public static class TheThirdWord
             } 
             else 
             { 
-                Console.WriteLine("Invalid entry, it must be at least 3 words: "); 
+                Console.WriteLine("Please enter at least 3 words."); 
             }
         }
         while (!isValid);
