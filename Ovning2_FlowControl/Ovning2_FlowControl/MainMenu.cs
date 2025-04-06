@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Ovning2_FlowControl;
+﻿namespace Ovning2_FlowControl;
 
 internal static class MainMenu
 {

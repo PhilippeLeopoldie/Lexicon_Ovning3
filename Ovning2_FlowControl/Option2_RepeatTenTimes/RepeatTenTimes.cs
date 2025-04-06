@@ -12,8 +12,4 @@ public static class RepeatTenTimes
             Console.Write($"{i}.{input}, ");
         }
     }
-
-    
-
-    
 }

@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace Option3_TheThirdWord
+﻿namespace Option3_TheThirdWord
 {
     public static class TheThirdWord
     {
@@ -22,7 +20,5 @@ namespace Option3_TheThirdWord
             while (!isValid);
             Console.WriteLine(result);
         }
-        
-        
     }
 }
