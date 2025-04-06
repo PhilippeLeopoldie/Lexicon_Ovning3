@@ -1,9 +1,9 @@
-﻿namespace Option1;
+﻿using Option1_YouthOrSenior;
 
-public  class YouthOrSeniorStarter
+namespace Option1;
+
+public class YouthOrSeniorStarter : Person
 {
-    public string Name { get; set; }
-    public uint Age { get; set; }
     public uint NumberOfPerson {  get; set; }
     public int TotalPrice { get; set; }
 
