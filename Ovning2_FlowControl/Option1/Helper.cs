@@ -1,11 +1,20 @@
 ﻿namespace Option1_YouthOrSenior;
 
-internal static class YouthOrSeniorHelper
+internal static class Helper
 {
     const int FreePrice = 0;
     const int YouthPrice = 80;
     const int SeniorPrice = 90;
     const int StandardPrice = 120;
+
+
+
+    internal static void DisplayPresentation()
+    {
+        Console.WriteLine("------Cinema Tickets------");
+        Console.Write("Enter number of person: ");
+    }
+
 
     internal static int GetPrice(Person person)
     {
