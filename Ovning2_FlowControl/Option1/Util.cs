@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Option1_YouthOrSenior;
+﻿namespace Option1_YouthOrSenior;
 
 public class Util
 {
@@ -15,8 +9,7 @@ public class Util
         {
             Console.Write("Invalid entry, try again: ");
             input = Console.ReadLine();
-        }
-        ;
+        };
         return result;
     }
 
@@ -27,8 +20,7 @@ public class Util
 
             Console.Write("Invalid entry, try again: ");
             input = Console.ReadLine();
-        }
-        ;
+        };
         return input;
     }
 }
