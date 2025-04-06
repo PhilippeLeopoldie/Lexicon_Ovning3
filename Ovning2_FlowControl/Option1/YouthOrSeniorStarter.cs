@@ -1,6 +1,4 @@
-﻿using Option1_YouthOrSenior;
-
-namespace Option1;
+﻿namespace Option1_YouthOrSenior;
 
 public class YouthOrSeniorStarter : Person
 {
