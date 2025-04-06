@@ -9,7 +9,7 @@ public static class YouthOrSeniorStarter
         var numberOfPerson = YouthOrSeniorHelper.UintValidation(Console.ReadLine());
         for(int i = 1; i <= numberOfPerson; i++)
         {
-            Console.Write($"Enter person {i} age: ");
+            Console.Write($"Enter person {i} age in 'Year': ");
             var age = YouthOrSeniorHelper.UintValidation(Console.ReadLine());
             Console.Write($"Person {i} has ");
             totalPrice += YouthOrSeniorHelper.DisplayDiscount(age);
