@@ -1,25 +1,35 @@
-﻿namespace Option3_TheThirdWord
+﻿namespace Option3_TheThirdWord;
+
+public static class TheThirdWord
 {
-    public static class TheThirdWord
+    public static void Run()
     {
-        public static void Run()
+        var isValid = false;
+        DisplayPresentation();
+        do
         {
-            var isValid = false;
-            var result = "";
-            do
+            var output = RemoveEmptySpace(Console.ReadLine());
+            if (output.Count() >= 3)
             {
-                Console.WriteLine("-------Third Word Extractor-------");
-                Console.WriteLine("Enter a sentence of at least 3 words:");
-                var input = Console.ReadLine().Trim();
-                var inputArray = input.Split(" ", StringSplitOptions.RemoveEmptyEntries);
-                if (inputArray.Count() >= 3)
-                {
-                    isValid = true;
-                    result = inputArray[2];
-                }
+                isValid = true;
+                Console.WriteLine($"The third word is: {output[2]}");
+            } 
+            else 
+            { 
+                Console.WriteLine("Invalid entry, try again: "); 
             }
-            while (!isValid);
-            Console.WriteLine(result);
         }
+        while (!isValid);
+    }
+
+    private static string[] RemoveEmptySpace (string input)
+    {
+        return input.Trim().Split(" ", StringSplitOptions.RemoveEmptyEntries);
+    }
+
+    private static void DisplayPresentation()
+    {
+        Console.WriteLine("-------Third Word Extractor-------");
+        Console.WriteLine("Enter a sentence of at least 3 words:");
     }
 }
