@@ -8,8 +8,7 @@ internal class Program
         var input="";
         do
         {
-            input = MainMenu.StartMainMenu();
-            Helper.RunApp(input);
+            input = Helper.RunApp(MainMenu.StartMainMenu());
         }
         while (input != stopProgram);
     }

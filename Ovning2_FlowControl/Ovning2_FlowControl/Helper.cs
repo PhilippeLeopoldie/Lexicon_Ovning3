@@ -17,7 +17,7 @@ internal static class Helper
         optionsList.Add( optionNumber, optionName );
     }*/
     
-    internal static void RunApp(string input)
+    internal static string RunApp(string input)
     {
         switch (input)
         {
@@ -34,5 +34,6 @@ internal static class Helper
                 break;
         }
         Console.WriteLine();
+        return input;
     }
 }
