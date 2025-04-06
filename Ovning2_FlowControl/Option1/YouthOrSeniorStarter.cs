@@ -17,7 +17,7 @@ public class YouthOrSeniorStarter
             Console.Write($"Enter {person.Name}'s age in 'Year': ");
             person.Age = YouthOrSeniorHelper.UintValidation(Console.ReadLine());
             Console.Write($"{person.Name} has ");
-            TotalPrice += YouthOrSeniorHelper.DisplayDiscount(person);
+            TotalPrice += YouthOrSeniorHelper.GetPrice(person);
         }
         Console.WriteLine($"Total price for {NumberOfPerson} person(s): {TotalPrice}kr");
     }

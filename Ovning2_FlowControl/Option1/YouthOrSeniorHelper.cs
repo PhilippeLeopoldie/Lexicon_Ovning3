@@ -35,7 +35,7 @@ internal static class YouthOrSeniorHelper
         return input;
     }
 
-    internal static int DisplayDiscount(Person person)
+    internal static int GetPrice(Person person)
     {
         var currentPriceLevel= person.PriceLevel;
         int price;
@@ -60,8 +60,9 @@ internal static class YouthOrSeniorHelper
             Console.WriteLine($"a Standard price: {StandardPrice}kr");
         }
         return price;
-
     }
+
+    
 
     
 }
