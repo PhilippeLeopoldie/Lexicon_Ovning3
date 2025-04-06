@@ -10,7 +10,7 @@ internal static class MainMenu
         {"0","Exit" }
     };
     
-    internal static string StartMainMenu()
+    internal static string StartPresentation()
     {
         Console.WriteLine("------- Main Menu -------");
         Console.WriteLine("Choose a function :");
