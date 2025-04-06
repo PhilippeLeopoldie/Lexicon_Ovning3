@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Option1_YouthOrSenior;
+﻿namespace Option1_YouthOrSenior;
 
 internal static class YouthOrSeniorHelper
 {
@@ -12,28 +6,6 @@ internal static class YouthOrSeniorHelper
     const int YouthPrice = 80;
     const int SeniorPrice = 90;
     const int StandardPrice = 120;
-
-    internal static uint UintValidation (string input)
-    {
-        uint result;
-        while(!uint.TryParse(input, out result))
-        {
-            Console.Write("Invalid entry, try again: ");
-            input = Console.ReadLine();
-        };
-        return result;
-    }
-
-    internal static string StringValidation (string input)
-    {
-        while (string.IsNullOrWhiteSpace(input))
-        {
-            
-            Console.Write("Invalid entry, try again: ");
-            input = Console.ReadLine();
-        };
-        return input;
-    }
 
     internal static int GetPrice(Person person)
     {

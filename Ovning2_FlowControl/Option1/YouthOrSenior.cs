@@ -10,13 +10,13 @@ public class YouthOrSenior
     {
         Console.WriteLine("------Cinema Tickets------");
         Console.Write("Enter number of person: ");
-        NumberOfPerson = YouthOrSeniorHelper.UintValidation(Console.ReadLine());
+        NumberOfPerson = Util.UintValidation(Console.ReadLine());
         for(int i = 1; i <= NumberOfPerson; i++)
         {
             Console.Write($"Enter person{i}'s name: ");
-            person.Name = YouthOrSeniorHelper.StringValidation(Console.ReadLine());
+            person.Name = Util.StringValidation(Console.ReadLine());
             Console.Write($"Enter {person.Name}'s age in 'Year': ");
-            person.Age = YouthOrSeniorHelper.UintValidation(Console.ReadLine());
+            person.Age = Util.UintValidation(Console.ReadLine());
             TotalPrice += YouthOrSeniorHelper.GetPrice(person);
             Console.WriteLine();
         }
