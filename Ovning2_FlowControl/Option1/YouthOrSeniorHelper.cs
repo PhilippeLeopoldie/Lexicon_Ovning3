@@ -42,22 +42,22 @@ internal static class YouthOrSeniorHelper
         if(currentPriceLevel == PriceLevel.FreePrice)
         {
             price = FreePrice;
-            Console.WriteLine($"an Entry for Free: {FreePrice}kr");
+            Console.WriteLine($"{person.Name} has an Entry for Free: {FreePrice}kr");
         }
         else if (currentPriceLevel == PriceLevel.YouthPrice)
         {
             price = YouthPrice;
-            Console.WriteLine($"a Youth price: {YouthPrice}kr");
+            Console.WriteLine($"{person.Name} has a Youth price: {YouthPrice}kr");
         }
         else if (currentPriceLevel == PriceLevel.SeniorPrice)
         {
             price = SeniorPrice;
-            Console.WriteLine($"a Senior price: {SeniorPrice}kr");
+            Console.WriteLine($"{person.Name} has a Senior price: {SeniorPrice}kr");
         }
         else
         {
             price = StandardPrice;
-            Console.WriteLine($"a Standard price: {StandardPrice}kr");
+            Console.WriteLine($"{person.Name} has a Standard price: {StandardPrice}kr");
         }
         return price;
     }

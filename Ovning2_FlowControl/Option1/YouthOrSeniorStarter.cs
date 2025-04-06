@@ -16,7 +16,6 @@ public class YouthOrSeniorStarter
             person.Name = YouthOrSeniorHelper.StringValidation(Console.ReadLine());
             Console.Write($"Enter {person.Name}'s age in 'Year': ");
             person.Age = YouthOrSeniorHelper.UintValidation(Console.ReadLine());
-            Console.Write($"{person.Name} has ");
             TotalPrice += YouthOrSeniorHelper.GetPrice(person);
         }
         Console.WriteLine($"Total price for {NumberOfPerson} person(s): {TotalPrice}kr");
