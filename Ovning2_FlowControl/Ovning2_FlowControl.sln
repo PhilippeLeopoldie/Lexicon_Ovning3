@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ovning2_FlowControl", "Ovni
 		{EBC28A49-310E-4A7E-A37C-71188CFD3C55} = {EBC28A49-310E-4A7E-A37C-71188CFD3C55}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Option1", "Option1\Option1.csproj", "{EBC28A49-310E-4A7E-A37C-71188CFD3C55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Option1_YouthOrSenior", "Option1\Option1_YouthOrSenior.csproj", "{EBC28A49-310E-4A7E-A37C-71188CFD3C55}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Option2_RepeatTenTimes", "Option2_RepeatTenTimes\Option2_RepeatTenTimes.csproj", "{03178347-AFED-417F-8D2F-EBE84CF68E9F}"
 EndProject

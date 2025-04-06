@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Option1;
 
-internal static class Option1Helper
+internal static class YouthOrSeniorHelper
 {
     const int FreePrice = 0;
     const int YouthPrice = 80;
