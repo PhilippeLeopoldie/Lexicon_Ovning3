@@ -6,11 +6,11 @@ public static class TheThirdWord
     public static void Run()
     {
         var isValid = false;
-        DisplayPresentation();
+        Helper.DisplayPresentation();
         do
         {
             var input = Util.StringValidation(Console.ReadLine());
-            var output = RemoveEmptySpace(input);
+            var output = Helper.RemoveEmptySpace(input);
             if (output.Count() >= 3)
             {
                 isValid = true;
@@ -22,16 +22,5 @@ public static class TheThirdWord
             }
         }
         while (!isValid);
-    }
-
-    private static string[] RemoveEmptySpace (string input)
-    {
-        return input.Trim().Split(" ", StringSplitOptions.RemoveEmptyEntries);
-    }
-
-    private static void DisplayPresentation()
-    {
-        Console.WriteLine("-------Third Word Extractor-------");
-        Console.WriteLine("Enter a sentence of at least 3 words:");
     }
 }
