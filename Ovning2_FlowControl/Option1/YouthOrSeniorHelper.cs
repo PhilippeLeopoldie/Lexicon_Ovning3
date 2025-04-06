@@ -24,6 +24,17 @@ internal static class YouthOrSeniorHelper
         return result;
     }
 
+    internal static string StringValidation (string input)
+    {
+        while (string.IsNullOrWhiteSpace(input))
+        {
+            
+            Console.Write("Invalid entry, try again: ");
+            input = Console.ReadLine();
+        };
+        return input;
+    }
+
     internal static int DisplayDiscount(uint age)
     {
         int price;

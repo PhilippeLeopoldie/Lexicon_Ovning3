@@ -1,19 +1,25 @@
 ﻿namespace Option1;
 
-public static class YouthOrSeniorStarter
+public  class YouthOrSeniorStarter
 {
-    public static void Run()
+    public string Name { get; set; }
+    public uint Age { get; set; }
+    public uint NumberOfPerson {  get; set; }
+    public int TotalPrice { get; set; }
+
+    public void Run()
     {
-        int totalPrice = 0;
         Console.Write("Enter number of person: ");
-        var numberOfPerson = YouthOrSeniorHelper.UintValidation(Console.ReadLine());
-        for(int i = 1; i <= numberOfPerson; i++)
+        NumberOfPerson = YouthOrSeniorHelper.UintValidation(Console.ReadLine());
+        for(int i = 1; i <= NumberOfPerson; i++)
         {
-            Console.Write($"Enter person {i} age in 'Year': ");
-            var age = YouthOrSeniorHelper.UintValidation(Console.ReadLine());
-            Console.Write($"Person {i} has ");
-            totalPrice += YouthOrSeniorHelper.DisplayDiscount(age);
+            Console.Write($"Enter person{i}'s name: ");
+            Name = YouthOrSeniorHelper.StringValidation(Console.ReadLine());
+            Console.Write($"Enter {Name}'s age in 'Year': ");
+            Age = YouthOrSeniorHelper.UintValidation(Console.ReadLine());
+            Console.Write($"{Name} has ");
+            TotalPrice += YouthOrSeniorHelper.DisplayDiscount(Age);
         }
-        Console.WriteLine($"Total price for {numberOfPerson} person(s): {totalPrice}kr");
+        Console.WriteLine($"Total price for {NumberOfPerson} person(s): {TotalPrice}kr");
     }
 }
