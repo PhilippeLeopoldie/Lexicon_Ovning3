@@ -5,7 +5,7 @@ using Option3_TheThirdWord;
 
 namespace Ovning2_FlowControl;
 
-internal static class Helper
+internal static class FlowControlHelper
 {
     internal static string RunApp(string input)
     {

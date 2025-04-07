@@ -8,7 +8,7 @@ internal class Program
         var input="";
         do
         {
-            input = Helper.RunApp(MainMenu.StartPresentation());
+            input = FlowControlHelper.RunApp(MainMenu.StartPresentation());
         }
         while (input != stopProgram);
     }
