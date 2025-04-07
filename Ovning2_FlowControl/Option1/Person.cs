@@ -1,6 +1,6 @@
 ﻿namespace Option1_YouthOrSenior;
 
-public class Person
+internal class Person
 {
     internal string Name { get; set; }
     internal uint Age { get; set; }

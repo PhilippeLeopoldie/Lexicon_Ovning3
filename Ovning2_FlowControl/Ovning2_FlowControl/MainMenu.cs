@@ -2,7 +2,7 @@
 
 internal static class MainMenu
 {
-    static Dictionary<string,string> Menu = new Dictionary<string, string>
+    private static Dictionary<string,string> Menu = new Dictionary<string, string>
     {
         {"1","Youth or Senior discount" },
         {"2","Repeat Ten Times" },

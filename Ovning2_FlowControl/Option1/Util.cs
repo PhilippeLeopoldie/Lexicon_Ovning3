@@ -1,6 +1,6 @@
 ﻿namespace Option1_YouthOrSenior;
 
-public class Util
+public static class Util
 {
     public static uint UintValidation(string input)
     {
@@ -17,7 +17,6 @@ public class Util
     {
         while (string.IsNullOrWhiteSpace(input))
         {
-
             Console.Write("Invalid entry, try again: ");
             input = Console.ReadLine();
         };

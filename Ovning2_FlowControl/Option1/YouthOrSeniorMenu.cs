@@ -2,9 +2,9 @@
 
 public class YouthOrSeniorMenu
 {
-    public Person person = new Person();
-    public uint NumberOfPerson {  get; set; }
-    public int TotalPrice { get; set; }
+    private Person person = new Person();
+    private uint NumberOfPerson {  get; set; }
+    private int TotalPrice { get; set; }
 
     public void Run()
     {
