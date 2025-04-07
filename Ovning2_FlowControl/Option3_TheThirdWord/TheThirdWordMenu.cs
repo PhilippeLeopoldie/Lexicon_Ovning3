@@ -1,7 +1,7 @@
 ﻿using Option1_YouthOrSenior;
 namespace Option3_TheThirdWord;
 
-public static class TheThirdWord
+public static class TheThirdWordMenu
 {
     public static void Run()
     {

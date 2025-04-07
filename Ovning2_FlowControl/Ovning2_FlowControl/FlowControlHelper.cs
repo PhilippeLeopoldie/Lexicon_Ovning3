@@ -13,11 +13,11 @@ internal static class Helper
         {
             case "0":
                 break;
-            case "1": new YouthOrSenior().Run();
+            case "1": new YouthOrSeniorMenu().Run();
                 break;
-            case "2": RepeatTenTimes.Run();
+            case "2": RepeatTenTimesMenu.Run();
                 break;
-            case "3": TheThirdWord.Run();
+            case "3": TheThirdWordMenu.Run();
                 break;
             default: 
                 Console.WriteLine("invalid entry");
