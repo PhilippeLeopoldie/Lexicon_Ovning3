@@ -4,6 +4,7 @@ namespace Option2_RepeatTenTimes;
 public static class RepeatTenTimesMenu
 {
     private const int numberOfRepetition = 10;
+
     public static void Run()
     {
         RepeatTenTimesHelper.DisplayPresentation();
