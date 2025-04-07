@@ -1,6 +1,6 @@
 ﻿namespace Option1_YouthOrSenior;
 
-internal static class Helper
+internal static class YouthOrSeniorHelper
 {
     const int FreePrice = 0;
     const int YouthPrice = 80;

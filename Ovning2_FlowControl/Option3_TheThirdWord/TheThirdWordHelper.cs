@@ -1,6 +1,6 @@
 ﻿namespace Option3_TheThirdWord;
 
-internal class Helper
+internal class TheThirdWordHelper
 {
     internal static string[] RemoveEmptySpace(string input)
     {

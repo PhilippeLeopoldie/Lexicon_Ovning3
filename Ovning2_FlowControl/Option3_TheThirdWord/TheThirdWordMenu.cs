@@ -6,11 +6,11 @@ public static class TheThirdWordMenu
     public static void Run()
     {
         var isValid = false;
-        Helper.DisplayPresentation();
+        TheThirdWordHelper.DisplayPresentation();
         do
         {
             var input = Util.StringValidation(Console.ReadLine());
-            var output = Helper.RemoveEmptySpace(input);
+            var output = TheThirdWordHelper.RemoveEmptySpace(input);
             if (output.Count() >= 3)
             {
                 isValid = true;

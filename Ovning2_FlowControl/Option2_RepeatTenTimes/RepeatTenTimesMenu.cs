@@ -6,9 +6,9 @@ public static class RepeatTenTimesMenu
     private const int numberOfRepetition = 10;
     public static void Run()
     {
-        Helper.DisplayPresentation();
+        RepeatTenTimesHelper.DisplayPresentation();
         var input = Util.StringValidation(Console.ReadLine());
-        Helper.DisplayNTime(input,numberOfRepetition);
+        RepeatTenTimesHelper.DisplayNTime(input,numberOfRepetition);
         Console.WriteLine();
     }
 }

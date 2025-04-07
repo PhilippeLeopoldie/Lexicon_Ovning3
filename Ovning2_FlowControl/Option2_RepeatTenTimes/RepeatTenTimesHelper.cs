@@ -1,6 +1,6 @@
 ﻿namespace Option2_RepeatTenTimes
 {
-    internal class Helper
+    internal class RepeatTenTimesHelper
     {
         internal static void DisplayPresentation()
         {
