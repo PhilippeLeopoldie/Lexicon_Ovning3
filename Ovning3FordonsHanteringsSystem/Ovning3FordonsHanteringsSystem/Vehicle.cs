@@ -18,7 +18,7 @@ internal class Vehicle
         {
             if (HasValidNumberOfCharacters(value))
                 brand = value;
-            else Log(charactersErrorMsg);
+            else ErrorMsg(charactersErrorMsg);
         }
     }
     
@@ -29,7 +29,7 @@ internal class Vehicle
         {
             if (HasValidNumberOfCharacters(value))
                 model = value;
-            else Log(charactersErrorMsg);
+            else ErrorMsg(charactersErrorMsg);
         }
     }
 
@@ -40,7 +40,7 @@ internal class Vehicle
         {
             if (HasValidYear(value))
                 year = value;
-            else Log($"year must be between {minYear} and {maxYear}");
+            else ErrorMsg($"year must be between {minYear} and {maxYear}");
         }
     }
 
@@ -51,7 +51,7 @@ internal class Vehicle
         {
             if (isPositive(value))
                 weight = value;
-            else Log("Only positive values accepted");
+            else ErrorMsg("Only positive values accepted");
         }
     }
 
@@ -65,7 +65,7 @@ internal class Vehicle
         return year > 1886 && year <= DateTime.Now.Year;
     }
 
-    private void Log(string msg)
+    private void ErrorMsg(string msg)
     {
         throw new ArgumentException($"{msg}");
     }
