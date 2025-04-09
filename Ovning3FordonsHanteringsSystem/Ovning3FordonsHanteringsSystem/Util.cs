@@ -2,10 +2,11 @@
 
 public static class Util
 {
-    public static uint UintValidation(string input)
+    public static int intValidation(string input)
     {
-        uint result;
-        while (!uint.TryParse(input, out result))
+        int result;
+        
+        while (!int.TryParse(input, out result) || result<=0)
         {
             Console.Write("Invalid entry, try again: ");
             input = Console.ReadLine();
