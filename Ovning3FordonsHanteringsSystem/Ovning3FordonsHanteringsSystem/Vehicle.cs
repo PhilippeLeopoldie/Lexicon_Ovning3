@@ -1,4 +1,6 @@
-﻿namespace Ovning3FordonsHanteringsSystem;
+﻿using Microsoft.VisualBasic;
+
+namespace Ovning3FordonsHanteringsSystem;
 
 internal class Vehicle
 {
@@ -10,6 +12,11 @@ internal class Vehicle
     private const int minYear = 1886;
     private int maxYear = DateTime.Now.Year;
     private const string charactersErrorMsg = "Number of character must be > 2 and < 20:";
+    private const string unknownValue = "unknown";
+
+    public Vehicle(string brand =unknownValue, string model = unknownValue, int year = minYear, double weight = 0 )
+    { 
+    }
 
     public string Brand
     {
