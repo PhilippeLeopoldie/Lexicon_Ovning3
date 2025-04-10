@@ -1,6 +1,6 @@
-﻿namespace Ovning3FordonsHanteringsSystem;
+﻿namespace Ovning3FordonsHanteringsSystem.Vehicles;
 
-public class Vehicle
+public abstract class Vehicle
 {
     private string brand;
     private string model;
@@ -15,7 +15,7 @@ public class Vehicle
     public Vehicle(string brand =unknownValue, string model = unknownValue, uint year = minYear, double weight = 0 )
     { 
     }
-    public Vehicle() { }
+    
 
     public string Brand
     {
@@ -51,6 +51,10 @@ public class Vehicle
            weight = WeightValidation(value);
         }
     }
+
+
+    public abstract string StartEngine();
+    public abstract string Stats();
 
     private int YearValidation(int year)
     {

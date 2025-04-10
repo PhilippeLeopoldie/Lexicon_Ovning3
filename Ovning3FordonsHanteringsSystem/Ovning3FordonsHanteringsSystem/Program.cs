@@ -1,5 +1,6 @@
 ﻿using Ovning3FordonsHanteringsSystem.SystemError;
 using Ovning3FordonsHanteringsSystem;
+using Ovning3FordonsHanteringsSystem.Vehicles;
 
 
 internal class Program
@@ -23,6 +24,15 @@ internal class Program
             {
                 Util.Log(error.ErrorMessage());
             }
+
+            List<Vehicle> vehicles = new List<Vehicle>()
+            {
+                new Car(),
+                new Truck(),
+                new Motorcycle(),
+                new ElectricScooter(),
+            };
+
         }
         catch (Exception e)
         {

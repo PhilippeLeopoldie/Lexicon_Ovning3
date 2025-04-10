@@ -1,4 +1,6 @@
-﻿namespace Ovning3FordonsHanteringsSystem;
+﻿using Ovning3FordonsHanteringsSystem.Vehicles;
+
+namespace Ovning3FordonsHanteringsSystem;
 
 internal static class VehicleHandler
 {
