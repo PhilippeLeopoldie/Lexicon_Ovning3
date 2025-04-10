@@ -1,36 +1,40 @@
 ﻿using Ovning3FordonsHanteringsSystem.Vehicles;
+using System.Reflection;
 
 namespace Ovning3FordonsHanteringsSystem;
 
 internal static class VehicleHandler
 {
-    private static HashSet<Vehicle> vehicles = new HashSet<Vehicle>();
+    public static HashSet<Vehicle> ListVehicles = new HashSet<Vehicle>();
 
     internal static void CreateVehicle(Vehicle vehicle)
     {
-        vehicles.Add(vehicle);
+        ListVehicles.Add(vehicle);
     }
 
-    internal static void ModifyBrand()
+    internal static void UpdateBrand(Vehicle vehicle, string brand)
     {
-        Console.WriteLine("Which brand would you like to modify?");
-        var brandToModify = Console.ReadLine();
-        Console.Write("Write the new brand:");
-        var newBrand = Console.ReadLine();
-        var vehicle = vehicles.FirstOrDefault(vehicle => vehicle.Brand == brandToModify);
-        if (vehicle != null) vehicle.Brand = newBrand;
-        else Util.Log($"No '{brandToModify}' vehicle found!");
+        vehicle.Brand = brand;
     }
 
-    internal static void ModifyModel(string modelToModify, string newModel)
+    internal static void UpdateModel(Vehicle vehicle, string model)
     {
-        var vehicle = vehicles.FirstOrDefault(vehicle => vehicle.Model == modelToModify);
-        vehicle.Model = newModel;
+        vehicle.Model = model;
     }
+
+    internal static void UpdateVehicle(Vehicle vehicle, string brand, string model, int year, double weight)
+    {
+        vehicle.Brand = brand;
+        vehicle.Model = model;
+        vehicle.Year = year;
+        vehicle.Weight = weight;
+    }
+
+    
 
     internal static void DisplayVehicles()
     {
-        foreach (var vehicle in vehicles)
+        foreach (var vehicle in ListVehicles)
         {
             Util.Log($"{vehicle}");
         }
