@@ -32,8 +32,13 @@ internal class Program
             {
                 Util.Log(vehicle.StartEngine());
                 Util.Log($"{vehicle.Stats()}");
+                if(vehicle is ICleanable cleanable)
+                {
+                    cleanable.Clean();
+                }
             }
-
+            Console.WriteLine();
+            Console.WriteLine("------Del 2 error messages-------");
             List<SystemError> errorList = new List<SystemError>
             {
                 new TransmissionError(),

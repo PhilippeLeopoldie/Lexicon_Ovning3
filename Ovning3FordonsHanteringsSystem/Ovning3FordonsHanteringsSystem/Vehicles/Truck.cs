@@ -26,7 +26,7 @@ namespace Ovning3FordonsHanteringsSystem.Vehicles
 
         public void Clean()
         {
-            throw new NotImplementedException();
+            Util.Log("The truck is cleaned!");
         }
     }
 }

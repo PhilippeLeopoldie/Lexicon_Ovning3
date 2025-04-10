@@ -1,9 +1,10 @@
 ﻿using Ovning3FordonsHanteringsSystem.Vehicles;
 using System.Reflection;
+using System.Collections.Generic;
 
 namespace Ovning3FordonsHanteringsSystem;
 
-internal static class VehicleHandler
+internal static class VehicleHandler  
 {
     public static HashSet<Vehicle> ListVehicles = new HashSet<Vehicle>();
 

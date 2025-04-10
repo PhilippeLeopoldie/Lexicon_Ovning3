@@ -29,7 +29,7 @@ namespace Ovning3FordonsHanteringsSystem.Vehicles
 
         public void Clean()
         {
-            throw new NotImplementedException();
+            Util.Log("The car is cleaned!");
         }
     }
 }
