@@ -1,7 +1,4 @@
 ﻿using Ovning3FordonsHanteringsSystem.Vehicles;
-using System.Reflection;
-using System.Collections.Generic;
-
 namespace Ovning3FordonsHanteringsSystem;
 
 internal static class VehicleHandler  
@@ -30,8 +27,6 @@ internal static class VehicleHandler
         vehicle.Year = year;
         vehicle.Weight = weight;
     }
-
-    
 
     internal static void DisplayVehicles()
     {

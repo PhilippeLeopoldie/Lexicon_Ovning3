@@ -1,28 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Ovning3FordonsHanteringsSystem.Vehicles;
 
-namespace Ovning3FordonsHanteringsSystem.Vehicles
+internal class ElectricScooter : Vehicle
 {
-    internal class ElectricScooter : Vehicle
+    public double BatteryPower {  get; set; }
+
+    public ElectricScooter(string brand, string model, int year, double weight, double batteryPower) : base(brand, model, year, weight)
     {
-        public double BatteryPower {  get; set; }
+        BatteryPower = batteryPower;
+    }
 
-        public ElectricScooter(string brand, string model, int year, double weight, double batteryPower) : base(brand, model, year, weight)
-        {
-            BatteryPower = batteryPower;
-        }
+    public override string StartEngine()
+    {
+        return "Scooter started!";
+    }
 
-        public override string StartEngine()
-        {
-            return "Scooter started!";
-        }
-
-        public override string Stats()
-        {
-            return $"{this}, battery power: {this.BatteryPower}";
-        }
+    public override string Stats()
+    {
+        return $"{this}, battery power: {this.BatteryPower}";
     }
 }

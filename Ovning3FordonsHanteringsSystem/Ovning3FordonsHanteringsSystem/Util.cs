@@ -2,17 +2,14 @@
 
 public static class Util
 {
-
     public static int intValidation(string input)
     {
         int result;
-        
         while (!int.TryParse(input, out result) || result<=0)
         {
             Log("This is not a number, try again: ");
             input = Console.ReadLine();
         };
-
         return result;
     }
 
