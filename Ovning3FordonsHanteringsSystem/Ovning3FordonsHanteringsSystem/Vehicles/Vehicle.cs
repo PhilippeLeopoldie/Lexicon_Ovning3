@@ -91,7 +91,7 @@ public abstract class Vehicle
 
     public override string ToString()
     {
-        return $"Vehicle {Brand}, {Model}, {Year}, {Weight}";
+        return $"Vehicle brand: {Brand}, model: {Model}, year: {Year}, weight: {Weight}";
     }
 }
 

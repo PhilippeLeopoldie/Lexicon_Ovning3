@@ -24,7 +24,7 @@ namespace Ovning3FordonsHanteringsSystem.Vehicles
 
         public override string Stats()
         {
-            throw new NotImplementedException();
+            return $"{this}, battery range: {this.BatteryRange}";
         }
     }
 }
