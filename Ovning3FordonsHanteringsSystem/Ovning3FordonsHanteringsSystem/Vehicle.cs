@@ -1,6 +1,4 @@
-﻿using Microsoft.VisualBasic;
-
-namespace Ovning3FordonsHanteringsSystem;
+﻿namespace Ovning3FordonsHanteringsSystem;
 
 internal class Vehicle
 {
@@ -9,12 +7,12 @@ internal class Vehicle
     private int year;
     private double weight;
 
-    private const int minYear = 1886;
+    private const uint minYear = 1886;
     private int maxYear = DateTime.Now.Year;
     private const string charactersErrorMsg = "Number of character must be > 2 and < 20:";
     private const string unknownValue = "unknown";
 
-    public Vehicle(string brand =unknownValue, string model = unknownValue, int year = minYear, double weight = 0 )
+    public Vehicle(string brand =unknownValue, string model = unknownValue, uint year = minYear, double weight = 0 )
     { 
     }
 
@@ -23,7 +21,7 @@ internal class Vehicle
         get => brand;
         set
         {
-            if (HasValidNumberOfCharacters(value))
+            if (HasValidNumberOfCharacters(Util.StringValidation(value)))
                 brand = value;
             else ErrorMsg(charactersErrorMsg);
         }
@@ -34,7 +32,7 @@ internal class Vehicle
         get => model;
         set
         {
-            if (HasValidNumberOfCharacters(value))
+            if (HasValidNumberOfCharacters(Util.StringValidation(value)))
                 model = value;
             else ErrorMsg(charactersErrorMsg);
         }
@@ -74,11 +72,17 @@ internal class Vehicle
 
     private void ErrorMsg(string msg)
     {
-        throw new ArgumentException($"{msg}");
+        Util.Log( $"{new ArgumentException($"{msg}")}");
     }
 
     private bool isPositive(double value)
     {
         return value >= 0;
     }
+
+    public override string ToString()
+    {
+        return $"Vehicle {Brand}, {Model}, {Year}, {Weight}";
+    }
 }
+

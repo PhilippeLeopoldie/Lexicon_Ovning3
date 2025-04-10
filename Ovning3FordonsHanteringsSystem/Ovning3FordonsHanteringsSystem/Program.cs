@@ -4,8 +4,16 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        VehicleHandler.CreateVehicle();
-        
-        VehicleHandler.ModifyBrand();
+        try
+        {
+            VehicleHandler.CreateVehicle();
+            VehicleHandler.DisplayVehicles();
+            VehicleHandler.ModifyBrand();
+            VehicleHandler.DisplayVehicles();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
     }
 }

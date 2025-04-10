@@ -21,7 +21,7 @@ public static class Util
             Console.Write("Invalid entry, try again: ");
             input = Console.ReadLine();
         };
-        return input;
+        return input.ToLower();
     }
 
     public static double DoubleValidation(string input)
@@ -29,9 +29,14 @@ public static class Util
         double result;
         while (!double.TryParse(input, out result))
         {
-            Console.WriteLine("Invalid entry, try again: ");
+            Console.Write("Invalid entry, try again: ");
             input = Console.ReadLine();
         }
         return result;
+    }
+
+    public static void Log(string message)
+    {
+        Console.WriteLine(message);
     }
 }
