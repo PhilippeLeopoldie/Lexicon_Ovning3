@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ovning3FordonsHanteringsSystem.Vehicles
 {
-    internal class Truck : Vehicle
+    internal class Truck : Vehicle, ICleanable
     {
         public double CargoCapacity { get; set; }
 
@@ -22,6 +22,11 @@ namespace Ovning3FordonsHanteringsSystem.Vehicles
         public override string Stats()
         {
             return $"{this}, cargo capacity: {this.CargoCapacity}";
+        }
+
+        public void Clean()
+        {
+            throw new NotImplementedException();
         }
     }
 }

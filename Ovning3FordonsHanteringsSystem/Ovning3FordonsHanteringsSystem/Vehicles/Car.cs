@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ovning3FordonsHanteringsSystem.Vehicles
 {
-    internal class Car : Vehicle
+    internal class Car : Vehicle, ICleanable
     {
 
         public double BatteryRange { get; set; }
@@ -25,6 +25,11 @@ namespace Ovning3FordonsHanteringsSystem.Vehicles
         public override string Stats()
         {
             return $"{this}, battery range: {this.BatteryRange}";
+        }
+
+        public void Clean()
+        {
+            throw new NotImplementedException();
         }
     }
 }
