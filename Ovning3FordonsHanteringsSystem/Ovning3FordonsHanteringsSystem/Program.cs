@@ -8,7 +8,6 @@ internal class Program
 {
     static void Main(string[] args)
     {
-       
         try
         {
             "------Del 2 Display List of SystemError objects-------".Log();
@@ -20,11 +19,11 @@ internal class Program
             };
             foreach (SystemError error in errorList)
             {
-                (error.ErrorMessage()).Log();
+                error.ErrorMessage().Log();
             }
             Console.WriteLine();
 
-            ("-----Create 4 vehicles-------").Log();
+            "-----Create 4 vehicles-------".Log();
             new Car("Peugot", "3008", 2012, 1208, 24).CreateVehicle();
             new Motorcycle("Yamaha", "Model Yamaha", 2024, 500, true ).CreateVehicle();
             new Truck("Scania", "r500", 2018, 8000, 3000).CreateVehicle();
@@ -32,24 +31,24 @@ internal class Program
             VehicleHandler.DisplayVehicles();
             Console.WriteLine();
 
-            ("-------modify the brand of the first vehicle----------").Log();
+            "-------modify the brand of the first vehicle----------".Log();
             VehicleHandler.ListVehicles.First().UpdateBrand("Volvo");
             VehicleHandler.DisplayVehicles();
             Console.WriteLine();
 
-            ("-------modify the vehicle 'xiamo'----------").Log();
+            "-------modify the vehicle 'xiamo'----------".Log();
             VehicleHandler.ListVehicles.First(vehicle => vehicle.Brand == "xiaomi").UpdateVehicle("segway", "Minebot Max", 2022, 19);
             VehicleHandler.DisplayVehicles();
             Console.WriteLine();
 
-            ("----Del4: loop throw list-------").Log();
+            "----Del4: loop throw list-------".Log();
             foreach(var vehicle in  VehicleHandler.ListVehicles)
             {
-                (vehicle.StartEngine()).Log();
-                ($"{vehicle.Stats()}").Log();
+                vehicle.StartEngine().Log();
+                $"{vehicle.Stats()}".Log();
                 if(vehicle is ICleanable cleanable)
                 {
-                    (cleanable.Clean()).Log();
+                    cleanable.Clean().Log();
                 }
                 Console.WriteLine();
             }
