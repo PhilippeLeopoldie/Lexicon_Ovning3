@@ -8,6 +8,6 @@ namespace Ovning3FordonsHanteringsSystem.Vehicles
 {
     internal interface ICleanable
     {
-        void Clean();
+        string Clean();
     }
 }

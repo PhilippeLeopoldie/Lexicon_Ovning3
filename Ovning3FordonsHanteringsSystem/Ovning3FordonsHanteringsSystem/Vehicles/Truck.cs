@@ -24,9 +24,9 @@ namespace Ovning3FordonsHanteringsSystem.Vehicles
             return $"{this}, cargo capacity: {this.CargoCapacity}";
         }
 
-        public void Clean()
+        public string Clean()
         {
-            Util.Log("The truck is cleaned!");
+            return "The truck is cleaned!";
         }
     }
 }

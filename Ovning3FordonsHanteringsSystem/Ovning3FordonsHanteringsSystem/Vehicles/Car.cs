@@ -27,9 +27,9 @@ namespace Ovning3FordonsHanteringsSystem.Vehicles
             return $"{this}, battery range: {this.BatteryRange}";
         }
 
-        public void Clean()
+        public string Clean()
         {
-            Util.Log("The car is cleaned!");
+            return "The car is cleaned!";
         }
     }
 }
