@@ -20,13 +20,20 @@ internal class Program
             VehicleHandler.UpdateBrand(VehicleHandler.ListVehicles.First(), "Volvo");
             VehicleHandler.DisplayVehicles();
             Console.WriteLine();
-            Console.WriteLine("-------modify the vehicle 'Xiamo'----------");
+            Console.WriteLine("-------modify the vehicle 'xiamo'----------");
             VehicleHandler.UpdateVehicle(VehicleHandler.ListVehicles
                 .First(vehicle => vehicle.Brand == "xiaomi"),
                 "segway", "Minebot Max", 2022, 19
                 );
             VehicleHandler.DisplayVehicles();
             Console.WriteLine();
+            Console.WriteLine("----Del4: loop throw list-------");
+            foreach(var vehicle in  VehicleHandler.ListVehicles)
+            {
+                Util.Log(vehicle.StartEngine());
+                Util.Log($"{vehicle.Stats()}");
+            }
+
             List<SystemError> errorList = new List<SystemError>
             {
                 new TransmissionError(),
