@@ -12,6 +12,7 @@ internal class Program
         {
             VehicleHandler.CreateVehicle(new Car("Peugot", "3008", 2012, 1208, 24));
             VehicleHandler.CreateVehicle(new Motorcycle("Yamaha", "Model Yamaha", 2024, 500, true ));
+            VehicleHandler.CreateVehicle(new Truck("Scania","r500", 2018, 8000, 3000));
             VehicleHandler.DisplayVehicles();
             VehicleHandler.ModifyBrand();
             VehicleHandler.DisplayVehicles();
