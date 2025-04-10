@@ -2,7 +2,7 @@
 
 public static class Util
 {
-    public static int intValidation(string input)
+    public static int intValidation(this string input)
     {
         int result;
         while (!int.TryParse(input, out result) || result<=0)
@@ -13,7 +13,7 @@ public static class Util
         return result;
     }
 
-    public static string StringValidation(string input, string errorMessage)
+    public static string StringValidation( string input,  string errorMessage)
     {
         while (input.Length < 2 || input.Length > 20)
         {
@@ -24,7 +24,7 @@ public static class Util
         return input.ToLower();
     }
 
-    public static double DoubleValidation(string input)
+    public static double DoubleValidation(this string input)
     {
         double result;
         while (!double.TryParse(input, out result))
@@ -35,13 +35,18 @@ public static class Util
         return result;
     }
 
-    public static void Log(string message)
+    public static void Log(this string message)
     {
         Console.WriteLine(message);
     }
 
-    public static void ErrorMsg(string msg)
+    public static void ErrorMsg(this string msg)
     {
         Log($"{new ArgumentException($"{msg}")}");
+    }
+
+    public static void NewLine()
+    {
+        Console.WriteLine();
     }
 }

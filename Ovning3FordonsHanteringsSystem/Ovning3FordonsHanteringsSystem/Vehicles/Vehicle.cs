@@ -20,7 +20,6 @@ public abstract class Vehicle
         Weight = weight;
     }
     
-
     public string Brand
     {
         get => brand;
@@ -55,7 +54,6 @@ public abstract class Vehicle
            weight = WeightValidation(value);
         }
     }
-
 
     public abstract string StartEngine();
     public abstract string Stats();

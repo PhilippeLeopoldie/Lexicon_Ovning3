@@ -1,16 +1,16 @@
 ﻿using Ovning3FordonsHanteringsSystem.Vehicles;
 namespace Ovning3FordonsHanteringsSystem;
 
-internal static class VehicleHandler  
+public static class VehicleHandler  
 {
     public static HashSet<Vehicle> ListVehicles = new HashSet<Vehicle>();
 
-    internal static void CreateVehicle(Vehicle vehicle)
+    internal static void CreateVehicle(this Vehicle vehicle)
     {
         ListVehicles.Add(vehicle);
     }
 
-    internal static void UpdateBrand(Vehicle vehicle, string brand)
+    internal static void UpdateBrand(this Vehicle vehicle, string brand)
     {
         vehicle.Brand = brand;
     }
@@ -20,7 +20,7 @@ internal static class VehicleHandler
         vehicle.Model = model;
     }
 
-    internal static void UpdateVehicle(Vehicle vehicle, string brand, string model, int year, double weight)
+    internal static void UpdateVehicle(this Vehicle vehicle, string brand, string model, int year, double weight)
     {
         vehicle.Brand = brand;
         vehicle.Model = model;

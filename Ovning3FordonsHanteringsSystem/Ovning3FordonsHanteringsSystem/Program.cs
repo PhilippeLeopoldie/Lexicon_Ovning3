@@ -3,6 +3,7 @@ using Ovning3FordonsHanteringsSystem;
 using Ovning3FordonsHanteringsSystem.Vehicles;
 
 
+
 internal class Program
 {
     static void Main(string[] args)
@@ -10,7 +11,7 @@ internal class Program
        
         try
         {
-            Console.WriteLine("------Del 2 Display List of SystemError objects-------");
+            "------Del 2 Display List of SystemError objects-------".Log();
             List<SystemError> errorList = new List<SystemError>
             {
                 new TransmissionError(),
@@ -19,39 +20,36 @@ internal class Program
             };
             foreach (SystemError error in errorList)
             {
-                Util.Log(error.ErrorMessage());
+                (error.ErrorMessage()).Log();
             }
             Console.WriteLine();
 
-            Console.WriteLine("-----Create 4 vehicles-------");
-            VehicleHandler.CreateVehicle(new Car("Peugot", "3008", 2012, 1208, 24));
-            VehicleHandler.CreateVehicle(new Motorcycle("Yamaha", "Model Yamaha", 2024, 500, true ));
-            VehicleHandler.CreateVehicle(new Truck("Scania","r500", 2018, 8000, 3000));
-            VehicleHandler.CreateVehicle(new ElectricScooter("Xiaomi", "m365", 2021, 12, 12.5));
+            ("-----Create 4 vehicles-------").Log();
+            new Car("Peugot", "3008", 2012, 1208, 24).CreateVehicle();
+            new Motorcycle("Yamaha", "Model Yamaha", 2024, 500, true ).CreateVehicle();
+            new Truck("Scania", "r500", 2018, 8000, 3000).CreateVehicle();
+            new ElectricScooter("Xiaomi", "m365", 2021, 12, 12.5).CreateVehicle();
             VehicleHandler.DisplayVehicles();
             Console.WriteLine();
 
-            Console.WriteLine("-------modify the brand of the first vehicle----------");
-            VehicleHandler.UpdateBrand(VehicleHandler.ListVehicles.First(), "Volvo");
+            ("-------modify the brand of the first vehicle----------").Log();
+            VehicleHandler.ListVehicles.First().UpdateBrand("Volvo");
             VehicleHandler.DisplayVehicles();
             Console.WriteLine();
 
-            Console.WriteLine("-------modify the vehicle 'xiamo'----------");
-            VehicleHandler.UpdateVehicle(VehicleHandler.ListVehicles
-                .First(vehicle => vehicle.Brand == "xiaomi"),
-                "segway", "Minebot Max", 2022, 19
-                );
+            ("-------modify the vehicle 'xiamo'----------").Log();
+            VehicleHandler.ListVehicles.First(vehicle => vehicle.Brand == "xiaomi").UpdateVehicle("segway", "Minebot Max", 2022, 19);
             VehicleHandler.DisplayVehicles();
             Console.WriteLine();
 
-            Console.WriteLine("----Del4: loop throw list-------");
+            ("----Del4: loop throw list-------").Log();
             foreach(var vehicle in  VehicleHandler.ListVehicles)
             {
-                Util.Log(vehicle.StartEngine());
-                Util.Log($"{vehicle.Stats()}");
+                (vehicle.StartEngine()).Log();
+                ($"{vehicle.Stats()}").Log();
                 if(vehicle is ICleanable cleanable)
                 {
-                    Util.Log(cleanable.Clean());
+                    (cleanable.Clean()).Log();
                 }
                 Console.WriteLine();
             }
@@ -59,7 +57,7 @@ internal class Program
         }
         catch (Exception e)
         {
-            Console.WriteLine(e.Message);
+            e.Message.Log();
         }
     }
 }
