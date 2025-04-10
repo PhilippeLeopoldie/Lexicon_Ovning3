@@ -6,17 +6,8 @@ internal static class VehicleHandler
 {
     private static HashSet<Vehicle> vehicles = new HashSet<Vehicle>();
 
-    internal static void CreateVehicle()
+    internal static void CreateVehicle(Vehicle vehicle)
     {
-        var vehicle = new Vehicle();
-        Console.Write("Brand: ");
-        vehicle.Brand =Console.ReadLine();
-        Console.Write("Model: ");
-        vehicle.Model =Console.ReadLine();
-        Console.Write("Year: ");
-        vehicle.Year = Util.intValidation(Console.ReadLine());
-        Console.Write("Weight (Kg): ");
-        vehicle.Weight = Util.DoubleValidation(Console.ReadLine());
         vehicles.Add(vehicle);
     }
 

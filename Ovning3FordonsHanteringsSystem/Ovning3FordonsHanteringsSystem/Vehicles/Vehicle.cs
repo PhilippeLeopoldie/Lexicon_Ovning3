@@ -7,13 +7,17 @@ public abstract class Vehicle
     private int year;
     private double weight;
 
-    private const uint minYear = 1886;
+    private const int minYear = 1886;
     private int maxYear = DateTime.Now.Year;
     private const string charactersErrorMsg = "Number of character must be > 2 and < 20.";
     private const string unknownValue = "unknown";
 
-    public Vehicle(string brand =unknownValue, string model = unknownValue, uint year = minYear, double weight = 0 )
-    { 
+    public Vehicle(string brand = unknownValue, string model = unknownValue, int year = minYear, double weight = 0 )
+    {
+        Brand = brand;
+        Model = model;
+        Year = year;
+        Weight = weight;
     }
     
 

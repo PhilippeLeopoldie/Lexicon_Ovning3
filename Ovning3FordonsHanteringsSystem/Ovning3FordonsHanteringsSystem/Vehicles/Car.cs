@@ -8,7 +8,14 @@ namespace Ovning3FordonsHanteringsSystem.Vehicles
 {
     internal class Car : Vehicle
     {
-        public double BatteryRange {  get; set; }
+
+        public double BatteryRange { get; set; }
+
+        public Car(string brand, string model, int year, double weight, double batteryRange) : base (brand,model, year, weight)
+        {
+            BatteryRange = batteryRange;
+        }
+        
 
         public override string StartEngine()
         {

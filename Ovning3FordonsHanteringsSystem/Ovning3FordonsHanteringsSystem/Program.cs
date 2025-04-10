@@ -7,9 +7,10 @@ internal class Program
 {
     static void Main(string[] args)
     {
+       
         try
         {
-            VehicleHandler.CreateVehicle();
+            VehicleHandler.CreateVehicle(new Car("Peugot", "3008", 2012, 1208, 24));
             VehicleHandler.DisplayVehicles();
             VehicleHandler.ModifyBrand();
             VehicleHandler.DisplayVehicles();
@@ -25,13 +26,6 @@ internal class Program
                 Util.Log(error.ErrorMessage());
             }
 
-            List<Vehicle> vehicles = new List<Vehicle>()
-            {
-                new Car(),
-                new Truck(),
-                new Motorcycle(),
-                new ElectricScooter(),
-            };
 
         }
         catch (Exception e)
