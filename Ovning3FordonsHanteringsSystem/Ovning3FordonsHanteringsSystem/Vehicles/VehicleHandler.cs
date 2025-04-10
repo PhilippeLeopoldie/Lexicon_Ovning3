@@ -1,5 +1,4 @@
-﻿using Ovning3FordonsHanteringsSystem.Vehicles;
-namespace Ovning3FordonsHanteringsSystem;
+﻿namespace Ovning3FordonsHanteringsSystem.Vehicles;
 
 public static class VehicleHandler  
 {
@@ -32,7 +31,7 @@ public static class VehicleHandler
     {
         foreach (var vehicle in ListVehicles)
         {
-            Util.Log($"{vehicle}");
+            $"{vehicle}".Log();
         }
     }
 }
