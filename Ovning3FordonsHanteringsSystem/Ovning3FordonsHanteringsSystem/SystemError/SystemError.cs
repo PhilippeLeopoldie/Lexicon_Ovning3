@@ -2,5 +2,5 @@
 
 public abstract class SystemError
 {
-    public abstract void ErrorMessage();
+    public abstract string ErrorMessage();
 }

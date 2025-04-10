@@ -2,8 +2,8 @@
 
 public class EngineFailureError : SystemError
 {
-    public override void ErrorMessage()
+    public override string ErrorMessage()
     {
-        Util.Log("Motorfel: Kontrollera motorstatus!");
+        return "Motorfel: Kontrollera motorstatus!";
     }
 }

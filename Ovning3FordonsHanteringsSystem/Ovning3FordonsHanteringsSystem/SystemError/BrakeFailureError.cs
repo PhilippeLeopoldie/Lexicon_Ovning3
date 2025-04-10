@@ -2,8 +2,8 @@
 
 public class BrakeFailureError : SystemError
 {
-    public override void ErrorMessage()
+    public override string ErrorMessage()
     {
-        Util.Log("Bromsfel: Fordonet är osäkert att köra!");
+        return "Bromsfel: Fordonet är osäkert att köra!";
     }
 }

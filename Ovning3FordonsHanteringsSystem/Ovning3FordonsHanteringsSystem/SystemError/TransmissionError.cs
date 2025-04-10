@@ -2,8 +2,8 @@
 
 public class TransmissionError : SystemError
 {
-    public override void ErrorMessage()
+    public override string ErrorMessage()
     {
-        Util.Log("Växellådsproblem: Reparation krävs!");
+        return "Växellådsproblem: Reparation krävs!";
     }
 }
