@@ -1,6 +1,6 @@
 ﻿namespace Ovning3FordonsHanteringsSystem;
 
-internal class Vehicle
+public class Vehicle
 {
     private string brand;
     private string model;
@@ -9,32 +9,28 @@ internal class Vehicle
 
     private const uint minYear = 1886;
     private int maxYear = DateTime.Now.Year;
-    private const string charactersErrorMsg = "Number of character must be > 2 and < 20:";
+    private const string charactersErrorMsg = "Number of character must be > 2 and < 20.";
     private const string unknownValue = "unknown";
 
     public Vehicle(string brand =unknownValue, string model = unknownValue, uint year = minYear, double weight = 0 )
     { 
     }
+    public Vehicle() { }
 
     public string Brand
     {
         get => brand;
         set
         {
-            if (HasValidNumberOfCharacters(Util.StringValidation(value)))
-                brand = value;
-            else ErrorMsg(charactersErrorMsg);
+            brand = Util.StringValidation(value, charactersErrorMsg);
         }
     }
-    
     public string Model
     {
         get => model;
         set
         {
-            if (HasValidNumberOfCharacters(Util.StringValidation(value)))
-                model = value;
-            else ErrorMsg(charactersErrorMsg);
+            model = Util.StringValidation(value, charactersErrorMsg);
         }
     }
 
@@ -43,9 +39,7 @@ internal class Vehicle
         get => year;
         set
         {
-            if (HasValidYear(value))
-                year = value;
-            else ErrorMsg($"year must be between {minYear} and {maxYear}");
+            year = YearValidation(value);
         }
     }
 
@@ -54,30 +48,37 @@ internal class Vehicle
         get => weight;
         set
         {
-            if (isPositive(value))
-                weight = value;
-            else ErrorMsg("Only positive values accepted");
+           weight = WeightValidation(value);
         }
     }
 
-    private bool HasValidNumberOfCharacters(string str)
+    private int YearValidation(int year)
     {
-        return str.Length >= 2 && str.Length <= 20; 
+        while (!HasValidYear(year))
+        {
+            Util.ErrorMsg($"year must be between {minYear} and {maxYear}: ");
+            Util.Log("Try again:");
+            var result = Console.ReadLine();
+            year = Util.intValidation(result);
+        }
+        return year;
+    }
+
+    private double WeightValidation(double weight)
+    {
+        while(weight < 0 )
+        {
+            Util.ErrorMsg("Only positive values accepted");
+            Util.Log("Try again:");
+            var result = Console.ReadLine();
+            weight = Util.DoubleValidation(result);
+        }
+        return weight;
     }
 
     private bool HasValidYear(int year)
     {
-        return year > 1886 && year <= DateTime.Now.Year;
-    }
-
-    private void ErrorMsg(string msg)
-    {
-        Util.Log( $"{new ArgumentException($"{msg}")}");
-    }
-
-    private bool isPositive(double value)
-    {
-        return value >= 0;
+        return year >= minYear && year <= DateTime.Now.Year;
     }
 
     public override string ToString()

@@ -2,25 +2,28 @@
 
 public static class Util
 {
+
     public static int intValidation(string input)
     {
         int result;
         
         while (!int.TryParse(input, out result) || result<=0)
         {
-            Console.Write("Invalid entry, try again: ");
+            Log("This is not a number, try again: ");
             input = Console.ReadLine();
         };
+
         return result;
     }
 
-    public static string StringValidation(string input)
+    public static string StringValidation(string input, string errorMessage)
     {
-        while (string.IsNullOrWhiteSpace(input))
+        while (input.Length < 2 || input.Length > 20)
         {
-            Console.Write("Invalid entry, try again: ");
+            ErrorMsg(errorMessage);
+            Log("Try again: ");
             input = Console.ReadLine();
-        };
+        }
         return input.ToLower();
     }
 
@@ -29,7 +32,7 @@ public static class Util
         double result;
         while (!double.TryParse(input, out result))
         {
-            Console.Write("Invalid entry, try again: ");
+            Log("Invalid entry, try again: ");
             input = Console.ReadLine();
         }
         return result;
@@ -38,5 +41,10 @@ public static class Util
     public static void Log(string message)
     {
         Console.WriteLine(message);
+    }
+
+    public static void ErrorMsg(string msg)
+    {
+        Log($"{new ArgumentException($"{msg}")}");
     }
 }
