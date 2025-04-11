@@ -49,5 +49,6 @@ internal class MainMenu
             default:
                 break;
         }
+        
     }
 }

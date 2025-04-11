@@ -7,7 +7,7 @@ public static class Util
     public static int intValidation(this string input)
     {
         int result;
-        while (!int.TryParse(input, out result) || result<=0)
+        while (!int.TryParse(input, out result) || result<0)
         {
             Log("This is not a number, try again: ");
             input = Console.ReadLine();
