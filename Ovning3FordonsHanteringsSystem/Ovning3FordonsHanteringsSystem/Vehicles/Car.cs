@@ -10,7 +10,10 @@ internal class Car : Vehicle, ICleanable
         BatteryRange = batteryRange;
     }
     
+    public Car()
+    {
 
+    }
     public override string StartEngine()
     {
         return "Car started!";
